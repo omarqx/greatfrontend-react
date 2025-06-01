@@ -51,7 +51,7 @@ const variantTextTranslator = (variant: variant) => {
 const sizeTextTranslator = (size: size) => {
   switch (size) {
     case "small":
-      return 'text-xs leading-none';
+      return 'text-xs';
     case "medium":
     case "large":
     default:
@@ -61,9 +61,13 @@ const sizeTextTranslator = (size: size) => {
 
 
 function Badge({ variant, size }: { variant: variant, size: size }) {
+  let style = {}
+  if (size === 'small') {
+    style = { lineHeight: 'normal' }
+  }
   return (
     <div className={`${sizeContainerTranslator(size)} ${variantContainerTranslator(variant)} rounded-full border flex justify-start items-center`}>
-      <div className={`${variantTextTranslator(variant)} ${sizeTextTranslator(size)} items-center text-center font-normal`}>Label</div>
+      <div className={`${variantTextTranslator(variant)} ${sizeTextTranslator(size)} items-center text-center font-medium`} style={style}>Label</div>
     </div>
   )
 }

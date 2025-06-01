@@ -17,6 +17,13 @@ export const links: Route.LinksFunction = () => [
     as: 'font',
     type: "font/woff2",
     crossorigin: "anonymous"
+  },
+  {
+    rel: 'preload',
+    href: '/fonts/noto-sans/noto-sans-latin-500-normal.woff2',
+    as: 'font',
+    type: "font/woff2",
+    crossorigin: "anonymous"
   }
 ];
 
