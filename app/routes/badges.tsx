@@ -7,12 +7,12 @@ const sizes: size[] = ["small", "medium", "large"];
 const sizeContainerTranslator = (size: size) => {
   switch (size) {
     case "small":
-      return 'h-5 px-1.5 py-0.5';
+      return 'h-5 px-[6px] py-0.5';
     case "medium":
       return 'h-6 px-2 py-1'
     case "large":
     default:
-      return 'h-7 px-2.5 py-1';
+      return 'h-7 px-[10px] py-1';
   }
 }
 
