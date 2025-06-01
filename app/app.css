@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Noto Sans'; /* Or your chosen font family name */
+  src:
+    /* Modern Browsers - WOFF2 first */
+    url('/fonts/noto-sans/noto-sans-latin-400-normal.woff2') format('woff2'),
+    /* Slightly Older Browsers - WOFF as fallback */
+    url('/fonts/noto-sans/noto-sans-latin-400-normal.woff') format('woff');
+  font-weight: 400; /* Corresponds to 'normal' */
+  font-style: normal;
+  font-display: swap; /* Crucial for performance and avoiding FOIT */
+}
+
