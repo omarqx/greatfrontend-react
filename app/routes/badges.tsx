@@ -7,12 +7,12 @@ const sizes: size[] = ["small", "medium", "large"];
 const sizeContainerTranslator = (size: size) => {
   switch (size) {
     case "small":
-      return 'h-5 px-[6px] py-0.5';
+      return 'h-5 px-[6px]';
     case "medium":
-      return 'h-6 px-2 py-1'
+      return 'h-6 px-2'
     case "large":
     default:
-      return 'h-7 px-[10px] py-1';
+      return 'h-7 px-[10px]';
   }
 }
 
@@ -55,19 +55,16 @@ const sizeTextTranslator = (size: size) => {
     case "medium":
     case "large":
     default:
-      return 'text-sm leading-tight';
+      return 'text-sm';
   }
 }
 
 
 function Badge({ variant, size }: { variant: variant, size: size }) {
-  let style = {}
-  if (size === 'small') {
-    style = { lineHeight: 'normal' }
-  }
+
   return (
     <div className={`${sizeContainerTranslator(size)} ${variantContainerTranslator(variant)} rounded-full border flex justify-start items-center`}>
-      <div className={`${variantTextTranslator(variant)} ${sizeTextTranslator(size)} items-center text-center font-normal`} style={style}>Label</div>
+      <div className={`${variantTextTranslator(variant)} ${sizeTextTranslator(size)} items-center text-center font-normal`}>Label</div>
     </div>
   )
 }
