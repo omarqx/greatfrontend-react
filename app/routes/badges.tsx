@@ -1,74 +1,7 @@
+import { Badge, type Sizes, type Variants } from "~/components";
 
-type variant = "neutral" | "error" | "warning" | "success" | "brand";
-const variants: variant[] = ["neutral", "error", "warning", "success", "brand"];
-type size = "small" | "medium" | "large";
-const sizes: size[] = ["small", "medium", "large"];
-
-const sizeContainerTranslator = (size: size) => {
-  switch (size) {
-    case "small":
-      return 'h-5 px-[6px]';
-    case "medium":
-      return 'h-6 px-2'
-    case "large":
-    default:
-      return 'h-7 px-[10px]';
-  }
-}
-
-const variantContainerTranslator = (variant: variant) => {
-  switch (variant) {
-    case "error":
-      return 'bg-red-50 border-red-200';
-    case "warning":
-      return 'bg-amber-50 border-amber-200';
-    case "success":
-      return 'bg-green-50 border-green-200';
-    case "brand":
-      return 'bg-indigo-50 border-indigo-200';
-    case "neutral":
-    default:
-      return 'bg-gray-50 border-neutral-200';
-  }
-}
-
-const variantTextTranslator = (variant: variant) => {
-  switch (variant) {
-    case "error":
-      return 'text-red-600';
-    case "warning":
-      return 'text-amber-700';
-    case "success":
-      return 'text-green-700';
-    case "brand":
-      return 'text-indigo-700';
-    case "neutral":
-    default:
-      return 'text-neutral-600';
-  }
-}
-
-const sizeTextTranslator = (size: size) => {
-  switch (size) {
-    case "small":
-      return 'text-xs';
-    case "medium":
-    case "large":
-    default:
-      return 'text-sm';
-  }
-}
-
-
-function Badge({ variant, size }: { variant: variant, size: size }) {
-
-  return (
-    <div className={`${sizeContainerTranslator(size)} ${variantContainerTranslator(variant)} rounded-full border flex justify-start items-center`}>
-      <div className={`${variantTextTranslator(variant)} ${sizeTextTranslator(size)} items-center text-center font-normal`}>Label</div>
-    </div>
-  )
-}
-
+const variants: Variants[] = ["neutral", "error", "warning", "success", "brand"];
+const sizes: Sizes[] = ["small", "medium", "large"];
 
 export default function Badges() {
   return (
