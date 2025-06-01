@@ -67,7 +67,7 @@ function Badge({ variant, size }: { variant: variant, size: size }) {
   }
   return (
     <div className={`${sizeContainerTranslator(size)} ${variantContainerTranslator(variant)} rounded-full border flex justify-start items-center`}>
-      <div className={`${variantTextTranslator(variant)} ${sizeTextTranslator(size)} items-center text-center font-medium`} style={style}>Label</div>
+      <div className={`${variantTextTranslator(variant)} ${sizeTextTranslator(size)} items-center text-center font-normal`} style={style}>Label</div>
     </div>
   )
 }
